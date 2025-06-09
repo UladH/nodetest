@@ -12,7 +12,7 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: '18.x'
+      versionSpec: '20.x'
     displayName: 'Install Node.js'
 
   - script: |
@@ -21,7 +21,7 @@ steps:
 
   - task: AzureWebApp@1
     inputs:
-      azureSubscription: 'azure-sub'
+      azureSubscription: 'uhtest'
       appType: 'webApp' 
       appName: 'uhtest'
       package: '$(System.DefaultWorkingDirectory)'
